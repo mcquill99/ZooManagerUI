@@ -1,0 +1,345 @@
+body{
+    background-image: url(data:image/png;base64,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);
+    background-color: #4d4d4d;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    float: left;
+}
+
+.wrapper{
+    position: relative;
+    padding-top: 20px;
+    background-color: #00ffbe;
+    height: 700px;
+    width: 1250px;
+    border: 2px solid #595959;
+    border-radius: 15px;
+    margin: auto;
+    
+
+}
+.PenHolder{
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    left: 0;
+    top: 0;
+}
+
+.pen{
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    padding-right: 20px;
+    margin-top: 33%;
+
+}
+
+.Interface{
+    background-image: url(data:image/png;base64,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);
+    background-color: #454446;
+    width: 700px;
+    height: 600px;
+    max-width: 100%;
+    border: 5px solid #000000;
+    border-radius: 15px;
+    float: left;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.feed-button{
+    position: relative;
+    width: 130px;
+    height: 100px;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    float: left;
+    box-shadow: 4px 4px 0px rgba(50,50,50,1);
+    background-image: url("Assets/food-bowl.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115px 80px;
+    color: rgba(255,255,255,1);
+
+    font-size: 25px;
+    align-content: center;
+    cursor: pointer;
+
+    flex: 0 0 30px;
+
+    margin: 15px 40px 110px;
+}
+
+.feed-button-depressed{
+    position: relative;
+    width: 130px;
+    height: 100px;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    float: left;
+
+    background-image: url("Assets/food-bowl.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115px 80px;
+    color: rgba(255,255,255,1);
+    background-color: #282729;
+
+    font-size: 25px;
+    align-content: center;
+    cursor: pointer;
+
+    flex: 0 0 30px;
+    top: 4px;
+    left: 4px;
+
+    margin: 15px 40px 110px;
+}
+
+
+.animal-pic{
+    filter: drop-shadow(5px 5px 0px #222);
+}
+
+.animal-pic-depressed{
+    padding-top: 5px;
+}
+.animal{
+    transform: scale(0.85);
+    position: absolute;
+}
+
+#animal1{
+    right: 50px;
+    top: 300px;
+    animation: test1 0.5s infinite;
+}
+
+#animal2{
+    right: 250px;
+    top: 200px;
+    animation: test2 2s infinite;
+}
+
+#animal3 {
+    right: 350px;
+    top: 330px;
+    animation: test3 3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes test1{
+    0%{
+        top:300px;
+    }
+    50%{
+        top:290px;
+    }
+    100%{
+        top:300px;
+    }
+}
+
+@keyframes test2{
+    0%{
+        right: 250px;
+        top: 200px;
+    }
+    25%{
+        right: 240px;
+        top: 190px;
+    }
+    50%{
+        right: 230px;
+        top: 200px;
+
+    }
+    75%{
+        right: 240px;
+        top: 190px;
+    }
+    100%{
+        right: 250px;
+        top: 200px;
+    }
+}
+
+@keyframes test3{
+    0%{
+        right: 350px;
+        top: 330px;
+    }
+    20%{
+        right: 340px;
+        top: 325px;
+    }
+    40%{
+        right: 330px;
+        top: 330px;
+    }
+    60%{
+        right: 320px;
+        top: 325px;
+    }
+    80%{
+        right: 310px;
+        top: 330px;
+    }
+    100%{
+        right: 300px;
+        top: 325px;
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 135px;
+    height: 70px;
+    margin-top: 25px;
+    margin-bottom: 150px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #005cff;
+    transition: .4s;
+
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    box-shadow:  4px 4px 0px rgba(50,50,50,75);
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: 72px;
+    left: 4px;
+    bottom: 4px;
+    transition: .4s;
+    background-image: url("Assets/lock-closed.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 60px;
+}
+
+input:checked + .slider {
+    background-color: #dcd9dc;
+    box-shadow: 4px 4px 0px rgba(50,50,50,1);
+}
+
+input:focus + .slider {
+    box-shadow: 4px 4px 0px rgba(50,50,50,1);
+}
+
+input:checked + .slider:before {
+    transform: translateX(50px);
+    background-image: url("Assets/lock-open.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65px 60px;
+}
+
+.food-bar{
+    background-image: url("Assets/hunger.png");
+    background-size: 20px 20px;
+    background-repeat: repeat-x;
+    position: relative;
+    height: 20px;
+    width: 120px;
+}
+.sprinkler{
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    filter: drop-shadow(4px 4px 0px #006352);
+
+}
+.sprinkler-button{
+    position: relative;
+    width: 150px;
+    height: 100px;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    float: left;
+    box-shadow: 4px 4px 0px rgba(50,50,50,1);
+    margin-top: 15px;
+    margin-bottom: 110px;
+
+    background-image: url("Assets/sprinkler-button.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-size: 115px 80px;
+    color: rgba(255,255,255,1);
+
+    font-size: 12px;
+    align-content: center;
+    cursor: pointer;
+
+    flex: 0 0 30px;
+}
+
+.sprinkler-button-depressed{
+    position: relative;
+    width: 150px;
+    height: 100px;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 110px;
+    text-align: center;
+
+    background-image: url("Assets/sprinkler-button.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115px 80px;
+    color: rgba(255,255,255,1);
+
+    font-size: 12px;
+    align-content: center;
+    cursor: pointer;
+
+    flex: 0 0 30px;
+    top: 4px;
+    left: 4px;
+}
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoo Software</title>
+    <link rel="stylesheet" type="text/css" href="css.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<div class="wrapper">
+    <div class="PenHolder">
+        <img class="sprinkler" src="Assets/sprinkler4.png" >
+        <img class="pen" src="Assets/pen2-locked.png">
+        <img  class ="animal" id="animal1" src="Assets/elephant.png">
+        <img  class ="animal" id="animal2" src="Assets/elephant.png">
+        <img  class ="animal" id="animal3" src="Assets/elephant.png">
+    </div>
+    <div class="Interface" style="padding-top: 5px;">
+        <div class="row">
+            <div class="column">
+                <div id= "1" style="padding-bottom: 55px; padding-left: 2px; padding-right: 20px;">
+                    <img class="animal-pic" id="elephant-pic" src="Assets/elephant.png">
+                    <div class="food-bar" id="elephantFoodBar" style="margin-top: 140px; margin-left: 5px;"></div>
+                </div>
+                <div id="2" style="padding-bottom: 100px; padding-left: 5px;">
+                    <img class="animal-pic"  id="giraffe-pic" src="Assets/giraffe.png">
+                    <div class="food-bar" id="giraffeFoodBar" style="margin-top: 160px; margin-left: 5px;"></div>
+                </div>
+                <div id="3" style="padding-left: 5px; padding-bottom: 5px;">
+                    <img class="animal-pic" id="turtle-pic" src="Assets/turtle.png">
+                    <div class="food-bar" id="turtleFoodBar" style="margin-top: 80px; margin-left: 5px;"></div>
+                </div>
+            </div>
+            <div class="column">
+                <div id="elephantSlider" >
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span  class="slider"></span>
+                    </label>
+                </div>
+                <div id="giraffeeSlider" style="visibility:hidden;">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span  class="slider"></span>
+                    </label>
+                </div>
+                <div id="turtleSlider" style="visibility:hidden; margin-top: -20px;">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span  class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="column">
+                <div>
+                    <div id="elephantFeed" class="feed-button" >
+                    </div>
+                </div>
+                <div>
+                    <div  id="giraffeFeed" class="feed-button" style="visibility:hidden;" >
+                    </div>
+                </div>
+                <div>
+                    <div  id="turtleFeed" class="feed-button" style="visibility:hidden;" >
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div>
+                    <div id="elephantSprinkler" class="sprinkler-button">
+                        <input id="elephantNum" type="number" style="position: relative; margin-left: 20%; margin-top: 45%; margin-bottom: 20px;" value="0" min="0" max="1000">
+                        <br>How long will this run for? (seconds)
+                    </div>
+                </div>
+                <div>
+                    <div  id="giraffeSprinkler" class="sprinkler-button"  style="visibility:hidden;">
+                        <input id="giraffeNum" type="number" style="position: relative; margin-left: 20%; margin-top: 45%; margin-bottom: 20px;" value="0" min="0" max="1000">
+                        <br>How long will this run for? (seconds)
+                    </div>
+                </div>
+                <div>
+                    <div  id="turtleSprinkler" class="sprinkler-button"  style="visibility:hidden;">
+                        <input id="turtleNum" type="number" style="position: relative; margin-left: 20%; margin-top: 45%; margin-bottom: 20px;" value="0" min="0" max="1000">
+                        <p style="margin-top: -165px;">How long will this run for? (seconds)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<body>
+
+</body>
+</html>
