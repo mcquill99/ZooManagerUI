@@ -11,8 +11,7 @@ Create a hypothetical User Interface that the Manager of a Zoo would use to watc
  These should be able ot be done for all individual Pens
 
 ## Constraints
------
 Only use HTML, CSS, JavaScript, and jQuery
------
+______
 
 All art assets besides the hunger bar and the valve were made by me, and all the styling was too
