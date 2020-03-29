@@ -11,6 +11,7 @@ $(document).ready(function(){
     var hungerBarID =["#elephantFoodBar", "#giraffeFoodBar", "#turtleFoodBar"];
     var pressed = false;
 
+
     function flipAnimals(){
         $('#animal1').css("transform", "scaleY(-1)");
         $('#animal2').css("transform", "scaleY(-1)");
@@ -69,6 +70,7 @@ $(document).ready(function(){
             if(animal[5] > 0){
                 animal[5] = animal[5] - 1;
                 animal[6] = false;
+                
 
             }
             else{
@@ -76,6 +78,13 @@ $(document).ready(function(){
             }
             if(animal[12] > 0){
                 animal[12] = animal[12] - 1;
+            }
+
+            if(animal[5] < 20){
+                $('#' + animal[0]).css("animation", "flash 1s infinite");
+            }
+            else{
+                $('#' + animal[0]).css("animation", "none");
             }
 
             let val = $(animal[13]).val();
@@ -132,6 +141,7 @@ $(document).ready(function(){
         pressed = true;
         $(this).removeClass("feed-button");
         $(this).addClass("feed-button-depressed");
+
         if(currentAnimal[5] <= currentAnimal[11] - 20){
             currentAnimal[5] = currentAnimal[5] + 20;
             $(currentAnimal[14]).toggle();
@@ -153,7 +163,7 @@ $(document).ready(function(){
 
     $('.sprinkler-button').mousedown(function(){
         let num = $(this).children().val();
-        if(num !== 0){
+        if(num !== 0 && num!== ""){
             $(this).removeClass("sprinkler-button");
             $(this).addClass("sprinkler-button-depressed");
         }
@@ -169,7 +179,7 @@ $(document).ready(function(){
     $(document).on("keypress", "input", function(e){
         if(e.which === 13){
             let num = $(this).val();
-        if(num !== 0){
+        if(num !== 0 && num!== ""){
             $(this).parent().removeClass("sprinkler-button");
             $(this).parent().addClass("sprinkler-button-depressed");
         }
