@@ -14,40 +14,48 @@
     <div class="PenHolder">
         <img class="sprinkler" src="Assets/sprinkler4.png" >
         <img class="pen" src="Assets/pen2-locked.png">
+        <img  class ="puddle" id="puddle1" src="Assets/puddle.png">
+        <img  class ="puddle" id="puddle2" src="Assets/puddle.png">
+        <img  class ="puddle" id="puddle3" src="Assets/puddle.png">
+        <img class="foodUp" id="elephantHeart" src="Assets/heart.png" >
+        <img class="foodUp" id="giraffeHeart" src="Assets/heart.png">
+        <img class="foodUp" id="turtleHeart" src="Assets/heart.png">
         <img  class ="animal" id="animal1" src="Assets/elephant.png">
         <img  class ="animal" id="animal2" src="Assets/elephant.png">
         <img  class ="animal" id="animal3" src="Assets/elephant.png">
+        
     </div>
+    
     <div class="Interface" style="padding-top: 5px;">
         <div class="row">
             <div class="column">
-                <div id= "1" style="padding-bottom: 55px; padding-left: 2px; padding-right: 20px;">
+                <div id= "1" style="padding-bottom: 55px; padding-left: 2px; padding-right: 20px; border-bottom:5px black;">
                     <img class="animal-pic" id="elephant-pic" src="Assets/elephant.png">
                     <div class="food-bar" id="elephantFoodBar" style="margin-top: 140px; margin-left: 5px;"></div>
                 </div>
                 <div id="2" style="padding-bottom: 100px; padding-left: 5px;">
-                    <img class="animal-pic"  id="giraffe-pic" src="Assets/giraffe.png">
+                    <img class="animal-pic"  id="giraffe-pic" src="Assets/giraffe.png" style="padding-right: 15px; padding-left: 15px;">
                     <div class="food-bar" id="giraffeFoodBar" style="margin-top: 160px; margin-left: 5px;"></div>
                 </div>
                 <div id="3" style="padding-left: 5px; padding-bottom: 5px;">
-                    <img class="animal-pic" id="turtle-pic" src="Assets/turtle.png">
-                    <div class="food-bar" id="turtleFoodBar" style="margin-top: 80px; margin-left: 5px;"></div>
+                    <img class="animal-pic" id="turtle-pic" src="Assets/turtle.png" style="padding-left: 20px; padding-right: 20px;">
+                    <div class="food-bar" id="turtleFoodBar" style="margin-top: 83px; margin-left: 5px;" ></div>
                 </div>
             </div>
             <div class="column">
                 <div id="elephantSlider" >
+                    <label class="switch" >
+                        <input type="checkbox">
+                        <span  class="slider"></span>
+                    </label>
+                </div>
+                <div id="giraffeeSlider" style="opacity: 0;">
                     <label class="switch">
                         <input type="checkbox">
                         <span  class="slider"></span>
                     </label>
                 </div>
-                <div id="giraffeeSlider" style="visibility:hidden;">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span  class="slider"></span>
-                    </label>
-                </div>
-                <div id="turtleSlider" style="visibility:hidden; margin-top: -20px;">
+                <div id="turtleSlider" style="opacity: 0; margin-top: -20px;">
                     <label class="switch">
                         <input type="checkbox">
                         <span  class="slider"></span>
@@ -71,20 +79,19 @@
             <div class="column">
                 <div>
                     <div id="elephantSprinkler" class="sprinkler-button">
-                        <input id="elephantNum" type="number" style="position: relative; margin-left: 20%; margin-top: 45%; margin-bottom: 20px;" value="0" min="0" max="1000">
-                        <br>How long will this run for? (seconds)
+                        <input id="elephantNum" type="number" class="animalNum"  min="0" max="1000" placeholder="Run Time">
                     </div>
                 </div>
                 <div>
                     <div  id="giraffeSprinkler" class="sprinkler-button"  style="visibility:hidden;">
-                        <input id="giraffeNum" type="number" style="position: relative; margin-left: 20%; margin-top: 45%; margin-bottom: 20px;" value="0" min="0" max="1000">
-                        <br>How long will this run for? (seconds)
+                        <input id="giraffeNum" type="number" class="animalNum" placeholder="Run Time" min="0" max="1000">
+
                     </div>
                 </div>
                 <div>
                     <div  id="turtleSprinkler" class="sprinkler-button"  style="visibility:hidden;">
-                        <input id="turtleNum" type="number" style="position: relative; margin-left: 20%; margin-top: 45%; margin-bottom: 20px;" value="0" min="0" max="1000">
-                        <p style="margin-top: -165px;">How long will this run for? (seconds)</p>
+                        <input id="turtleNum" type="number" class="animalNum" placeholder="Run Time" min="0" max="1000">
+            
                     </div>
                 </div>
             </div>

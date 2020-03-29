@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    var animals =[["elephant-pic", "Assets/pen2-locked.png", "Assets/pen2.png", "Assets/elephant.png", true, 75, false, false, "#elephantSlider", "#elephantFeed", "#elephantSprinkler", 75, 0],
-        ["giraffe-pic", "Assets/pen1-locked.png","Assets/pen1.png", "Assets/giraffe.png", true, 100,false, false, "#giraffeeSlider", "#giraffeFeed", "#giraffeSprinkler", 100, 0],
-        ["turtle-pic", "Assets/pen3-locked.png", "Assets/pen3.png", "Assets/turtle.png", true, 170, false, false, "#turtleSlider", "#turtleFeed", "#turtleSprinkler", 170,0]];
+    var animals =[["elephant-pic", "Assets/pen2-locked.png", "Assets/pen2.png", "Assets/elephant.png", true, 75, false, false, "#elephantSlider", "#elephantFeed", "#elephantSprinkler", 75, 0, '#elephantNum', '#elephantHeart'],
+        ["giraffe-pic", "Assets/pen1-locked.png","Assets/pen1.png", "Assets/giraffe.png", true, 100,false, false, "#giraffeeSlider", "#giraffeFeed", "#giraffeSprinkler", 100, 0, '#giraffeNum', '#giraffeHeart'],
+        ["turtle-pic", "Assets/pen3-locked.png", "Assets/pen3.png", "Assets/turtle.png", true, 170, false, false, "#turtleSlider", "#turtleFeed", "#turtleSprinkler", 170,0, '#turtleNum', '#turtleNum']];
     //name, pens locked and unlocked, animal, if locked, health,if dead,if sprinkler is on, row tags,original food value, and sprinkler run time
     var pen= "Assets/pen2-locked.png";
     var currentAnimal = animals[0];
@@ -35,6 +35,8 @@ $(document).ready(function(){
         if(currentAnimal[12] > 0){
             index++;
             $(".sprinkler").attr("src", sprinkler[index]);
+            $(".puddle").css("visibility","visible");
+
             if(index === 3){
                 index = -1;
             }
@@ -42,7 +44,9 @@ $(document).ready(function(){
         else{
             index = -1;
             $(".sprinkler").attr("src", sprinkler[0]);
+            $(".puddle").css("visibility","hidden");
         }
+
 
         for(let i = 0; i < 3; i++){
             $(hungerBarID[i]).css("width", (width * (animals[i][5] / animals[i][11])).toString() + "px");
@@ -73,6 +77,8 @@ $(document).ready(function(){
             if(animal[12] > 0){
                 animal[12] = animal[12] - 1;
             }
+
+            let val = $(animal[13]).val();
         }
 
     }, 1000);
@@ -98,12 +104,12 @@ $(document).ready(function(){
         $(this).addClass("animal-pic-depressed");
 
         for(let animal of animals){
-            $(animal[8]).css("visibility", "hidden");
+            $(animal[8]).css("opacity", "0");
             $(animal[9]).css("visibility", "hidden");
             $(animal[10]).css("visibility", "hidden");
         }
 
-        $(currentAnimal[8]).css("visibility", "visible");
+        $(currentAnimal[8]).css("opacity", "1");
         $(currentAnimal[9]).css("visibility", "visible");
         $(currentAnimal[10]).css("visibility", "visible");
 
@@ -128,6 +134,12 @@ $(document).ready(function(){
         $(this).addClass("feed-button-depressed");
         if(currentAnimal[5] <= currentAnimal[11] - 20){
             currentAnimal[5] = currentAnimal[5] + 20;
+            $(currentAnimal[14]).toggle();
+            $(currentAnimal[14]).css('animation-play-state', 'running');
+            window.setTimeout(function() {
+                $(currentAnimal[14]).css('animation-play-state', 'paused');
+                $(currentAnimal[14]).toggle();
+            }, 1000);
         }
     });
 
@@ -140,9 +152,11 @@ $(document).ready(function(){
     });
 
     $('.sprinkler-button').mousedown(function(){
-        $(this).removeClass("sprinkler-button");
-        $(this).addClass("sprinkler-button-depressed");
         let num = $(this).children().val();
+        if(num !== 0){
+            $(this).removeClass("sprinkler-button");
+            $(this).addClass("sprinkler-button-depressed");
+        }
         currentAnimal[7] = !currentAnimal[7];
         currentAnimal[12] = num;
     });
@@ -151,6 +165,26 @@ $(document).ready(function(){
         $(this).removeClass("sprinkler-button-depressed");
         $(this).addClass("sprinkler-button");
     });
+
+    $(document).on("keypress", "input", function(e){
+        if(e.which === 13){
+            let num = $(this).val();
+        if(num !== 0){
+            $(this).parent().removeClass("sprinkler-button");
+            $(this).parent().addClass("sprinkler-button-depressed");
+        }
+        currentAnimal[7] = !currentAnimal[7];
+        currentAnimal[12] = num;
+        }
+    });
+
+    $(document).on("keyup", "input", function(e){
+        if(e.which === 13){
+            $(this).parent().removeClass("sprinkler-button-depressed");
+            $(this).parent().addClass("sprinkler-button");
+        }
+    });
+
 
     $('.slider').click(function(){
         currentAnimal[4] = !currentAnimal[4];
