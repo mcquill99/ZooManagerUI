@@ -194,7 +194,7 @@ img{
     opacity: 0;
     animation: fadeInUp 1s infinite;
     animation-play-state: paused;
-    padding-left: 25px; 
+    padding-left: 550px; 
     padding-top: 25px; 
     display: none;
 }

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var animals =[["elephant-pic", "Assets/pen2-locked.png", "Assets/pen2.png", "Assets/elephant.png", true, 75, false, false, "#elephantSlider", "#elephantFeed", "#elephantSprinkler", 75, 0, '#elephantNum', '#elephantHeart'],
         ["giraffe-pic", "Assets/pen1-locked.png","Assets/pen1.png", "Assets/giraffe.png", true, 100,false, false, "#giraffeeSlider", "#giraffeFeed", "#giraffeSprinkler", 100, 0, '#giraffeNum', '#giraffeHeart'],
-        ["turtle-pic", "Assets/pen3-locked.png", "Assets/pen3.png", "Assets/turtle.png", true, 170, false, false, "#turtleSlider", "#turtleFeed", "#turtleSprinkler", 170,0, '#turtleNum', '#turtleNum']];
+        ["turtle-pic", "Assets/pen3-locked.png", "Assets/pen3.png", "Assets/turtle.png", true, 170, false, false, "#turtleSlider", "#turtleFeed", "#turtleSprinkler", 170,0, '#turtleNum', '#turtleHeart']];
     //name, pens locked and unlocked, animal, if locked, health,if dead,if sprinkler is on, row tags,original food value, and sprinkler run time
     var pen= "Assets/pen2-locked.png";
     var currentAnimal = animals[0];
