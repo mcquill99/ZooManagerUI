@@ -1,5 +1,5 @@
 # ZooManagerUI
-Project for HCI: Creating an interface to watch over animal pens
+Project for Human Computer Interactions: Creating an interface to watch over animal pens
 
 ## Objective
 Create a hypothetical User Interface that the Manager of a Zoo would use to watch over 3 Animal Pens. 
